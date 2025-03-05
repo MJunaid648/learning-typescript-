@@ -1,6 +1,8 @@
 import "./App.css";
+import Button from "./components/Button";
 import Greet from "./components/Greet";
 import Heading from "./components/Heading";
+import Input from "./components/Input";
 import Oscar from "./components/Oscar";
 import Person from "./components/Person";
 import PersonList from "./components/PersonList";
@@ -32,7 +34,7 @@ function App() {
       {/* Props of string or number type */}
       <Greet name="Junaid" messageCount={10} />
       {/* Optional prop */}
-      <Greet name="Junaid"  />
+      <Greet name="Junaid" />
       {/* Props of object type */}
       <Person name={personName} />
       {/* Props of array type */}
@@ -45,6 +47,22 @@ function App() {
       <Oscar>
         <Heading>Oscar goes to Leonardo Dicaprio!</Heading>
       </Oscar>
+      {/* Props of Event type */}
+      <Button
+        // handleClickVoid={() => {
+        //   console.log("Button Clicked!");
+        // }}
+        handleClickWithParams={(event, id) => {
+          console.log(event);
+          console.log(id);
+        }}
+      />
+      <Input
+        value=""
+        onChange={(event) => {
+          console.log(event);
+        }}
+      />
     </div>
   );
 }
