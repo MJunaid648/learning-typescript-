@@ -3,10 +3,12 @@ import Button from "./components/Button";
 import Greet from "./components/Greet";
 import Heading from "./components/Heading";
 import Input from "./components/Input";
+import NameList from "./components/NameList";
 import Oscar from "./components/Oscar";
 import Person from "./components/Person";
 import PersonList from "./components/PersonList";
 import Status from "./components/Status";
+import StyledDiv from "./components/StyledDiv";
 
 const personName = {
   first: "Bruce",
@@ -62,6 +64,12 @@ function App() {
         onChange={(event) => {
           console.log(event);
         }}
+      />
+      {/* Passing CSS Style as Props */}
+      <StyledDiv style={{ border: "1p solid black", padding: "10px" }} />
+      {/* Types export and reusability */}
+      <NameList
+        names={nameList}
       />
     </div>
   );
