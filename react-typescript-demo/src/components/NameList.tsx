@@ -3,6 +3,7 @@ import { Name } from "../types/Name.type";
 type NameProps = {
   names: Name[];
 };
+
 const NameList = ({ names }: NameProps) => {
   return (
     <div>

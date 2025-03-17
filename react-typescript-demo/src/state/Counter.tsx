@@ -3,13 +3,16 @@ import { useReducer } from "react";
 type CounterState = {
   count: number;
 };
+
 type UpdateAction = {
   type: "increment" | "decrement"; //for strict action types
   payload?: number;
 };
+
 type ResetAction = {
   type: "reset";
 };
+
 type CounterAction = UpdateAction | ResetAction;
 
 const initialState = { count: 0 };
@@ -29,6 +32,7 @@ function reducer(state: CounterState, action: CounterAction) {
 
 const Counter = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
+
   return (
     <>
       Count: {state.count}

@@ -49,9 +49,6 @@ const PropsnTypes = () => {
       </Oscar>
       {/* Props of Event type */}
       <Button
-        // handleClickVoid={() => {
-        //   console.log("Button Clicked!");
-        // }}
         handleClickWithParams={(event, id) => {
           console.log(event);
           console.log(id);
@@ -65,7 +62,7 @@ const PropsnTypes = () => {
       />
       {/* Passing CSS Style as Props */}
       <StyledDiv style={{ border: "1p solid black", padding: "10px" }} />
-      {/* Types export and reusability */}
+      {/* Type export and reusability */}
       <NameList names={nameList} />
     </div>
   );

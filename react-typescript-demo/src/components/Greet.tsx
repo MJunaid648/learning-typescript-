@@ -7,7 +7,8 @@ type GreetProps = {
   messageCount?: number;
 };
 const Greet = (props: GreetProps) => {
-  const { messageCount = 0 } = props;
+  // initializing default value for optional prop messageCount to be used in case of missing value
+  const { messageCount = 0 } = props; 
   return (
     <h2>
       Hi {props.name}! You have {messageCount} unread messages.

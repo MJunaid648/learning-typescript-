@@ -1,6 +1,7 @@
 type StatusProps = {
   status: "loading" | "success" | "error";
 };
+
 const Status = ({ status }: StatusProps) => {
   let message: string = "";
   if (status === "loading") {
